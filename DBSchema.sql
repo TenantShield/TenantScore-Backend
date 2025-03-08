@@ -1,7 +1,9 @@
 -- Users Table
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    full_name VARCHAR(255) NOT NULL,
+    firstname VARCHAR(255) NOT NULL,
+    middlename VARCHAR(255) NOT NULL,
+    surname VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     password_hash TEXT NOT NULL,
     phone VARCHAR(20),
