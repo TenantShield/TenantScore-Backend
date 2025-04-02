@@ -8,6 +8,8 @@ CREATE TABLE users (
     password_hash TEXT NOT NULL,
     phone VARCHAR(20),
     role VARCHAR(50) CHECK (role IN ('landlord', 'tenant', 'admin')),
+    email_verified BOOLEAN DEFAULT FALSE, -- New: Track email verification status
+    password_reset_required BOOLEAN DEFAULT TRUE, -- New: Force password reset on first login
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
